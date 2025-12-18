@@ -20,6 +20,7 @@ headers = {
 # ============================
 # Scraping de la page agenda
 # ============================
+
 agenda_url = BASE_URL + BASE_URL_AGENDA
 res = requests.get(agenda_url, headers=headers)
 soup = BeautifulSoup(res.text, 'html.parser')
@@ -34,9 +35,11 @@ for item in items:
     if lien.startswith("/"):
         lien = BASE_URL + lien
 
+
     # ---------------------------
     # Scraping de la page événement pour SitIntro-container
     # ---------------------------
+    
     res_link = requests.get(lien, headers=headers)
     soup_link = BeautifulSoup(res_link.text, 'html.parser')
     show_event = soup_link.select_one('div.SitIntro-container')
@@ -53,7 +56,7 @@ for item in items:
     # ---------------------------
     # Scraping de la page événement pour SitCalendar-container
     # ---------------------------
-
+    
     def get_calendar(soup_link):
         calendar = {
             "month": None, 
@@ -65,6 +68,7 @@ for item in items:
         if container:
             item = container.select_one('.SitCalendar-item')
             calendar["month"] = item.select_one('.SitCalendar-month').text.strip()
+            
             for day_el in item.select('.SitCalendar-day'):
                 spans = day_el.find_all('span')
                 calendar["days"].append({

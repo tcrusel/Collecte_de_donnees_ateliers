@@ -23,15 +23,6 @@ RAW_DIR = os.path.join(BASE_DIR, "datalake", "raw")
 # ==========================================
 
 def save_parquet_with_date(df: pd.DataFrame, out_dir: str, base_name: str) -> str:
-    """
-    Sauvegarde un DataFrame au format Parquet dans le dossier de sortie,
-    en ajoutant la date du jour (UTC) au nom du fichier.
-
-    :param df: DataFrame pandas à sauvegarder
-    :param out_dir: Répertoire de destination
-    :param base_name: Nom de base du fichier
-    :return: Chemin complet du fichier Parquet créé
-    """
 
     # Crée le dossier de sortie s'il n'existe pas
     os.makedirs(out_dir, exist_ok=True)
@@ -54,12 +45,6 @@ def save_parquet_with_date(df: pd.DataFrame, out_dir: str, base_name: str) -> st
 # ==========================================
 
 def ingest_csv(filename: str) -> pd.DataFrame:
-    """
-    Lit un fichier CSV local et le charge dans un DataFrame pandas.
-
-    :param filename: Nom du fichier CSV (dans le dossier data/)
-    :return: DataFrame pandas contenant les données
-    """
 
     # Construit le chemin complet du fichier CSV
     path = os.path.join(DATA_DIR, filename)
