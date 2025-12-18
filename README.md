@@ -20,6 +20,7 @@ python scripts/ingest_atelier1.py --run all
 - Données nettoyées et normalisées (datalake/clean)
 - Jeu de données final de features (datalake/features)
 
+
 ## Atelier 2 : collecte en ligne (scraping) de données touristiques
 
 ### Objectif
@@ -50,8 +51,8 @@ pip install -r requirements.txt
 Toutes les données sont stockées au format Parquet
 Les fichiers bruts et intermédiaires ne sont pas versionnés (via .gitignore)
 
-### Auteurs
 
+## Auteurs
 Edouard Dieppois
 Nicolas Chiche
 Thomas Crusel
