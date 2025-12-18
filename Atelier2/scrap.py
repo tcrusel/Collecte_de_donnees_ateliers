@@ -49,30 +49,33 @@ for item in items:
         list_info = show_event.select('ul > li')
         infos_list = [li.get_text(strip=True) for li in list_info]
       
+      
+    # ---------------------------
+    # Scraping de la page événement pour SitCalendar-container
+    # ---------------------------
+
+    def get_calendar(soup_link):
+        calendar = {
+            "month": None, 
+            "days": []
+            }
         
-    calendar = {
-        "month": None, 
-        "days": []
-        }
+        container = soup_link.select_one('.SitCalendar-container')
+        
+        if container:
+            item = container.select_one('.SitCalendar-item')
+            calendar["month"] = item.select_one('.SitCalendar-month').text.strip()
+            for day_el in item.select('.SitCalendar-day'):
+                spans = day_el.find_all('span')
+                calendar["days"].append({
+                    "day": spans[0].text.strip(),
+                    "time": spans[1].text.strip()
+                })
+        return calendar
 
-    # ---------------------------
-    # Scraping de la page calendrier
-    # ---------------------------
-    calendar_container = soup_link.select_one('.SitCalendar-container')
-    calendar_item = calendar_container.select_one('.SitCalendar-item')
-
-    # Récupération du mois
-    calendar["month"] = calendar_item.select_one('.SitCalendar-month').text.strip()
-
-    # Récupération de tous les jours
-    for day_el in calendar_item.select('.SitCalendar-day'):
-        spans = day_el.find_all('span')
-        calendar["days"].append({
-            "day": spans[0].text.strip(),
-            "time": spans[1].text.strip()
-        })
-
-
+    calendar = get_calendar(soup_link)
+    
+    
     resultats.append({
         "titre": titre,
         "date_text": date_text,
