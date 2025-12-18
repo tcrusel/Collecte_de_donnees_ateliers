@@ -1,0 +1,17 @@
+bm_gid;bm_ident;bm_libelle;bm_actuel;bm_ref;bm_cdate;bm_mdate
+1;20;Boulevards: Rond point JJBosc à la Barrière Ornano;900;865;2011-06-09;2025-12-17T14:05:00+00:00
+2;21;Boulevards: Barrière Ornano à la Place Latule;900;942;2011-06-09;2025-12-17T14:05:00+00:00
+3;22;Boulevards: Place Latule à la Barrière Ornano;900;1020;2011-06-09;2025-12-17T14:05:00+00:00
+4;23;Boulevards: Barrière Ornano au Rond point JJBosc;900;858;2011-06-09;2025-12-17T14:05:00+00:00
+5;24;Quais: Rond point JJBosc à la Place Latule;960;1152;2011-06-09;2025-12-17T14:05:00+00:00
+6;25;Quais: Place Latule à Rond point JJBosc;1020;1027;2011-06-09;2025-12-17T14:05:00+00:00
+7;26;Cours: Pont Saint Jean à la rue Lucien Faure via la Victoire et Gambetta;1260;1390;2011-06-09;2025-12-17T14:05:00+00:00
+8;27;Cours: Rue Lucien Faure au Pont Saint Jean via la Victoire et Gambetta;1320;1205;2011-06-09;2025-12-17T14:05:00+00:00
+9;28;Thiers : Pont de Pierre à la Mairie de Cenon;540;736;2011-06-09;2025-12-17T14:05:00+00:00
+10;29;Thiers : Mairie de Cenon au Pont de Pierre;540;536;2011-06-09;2025-12-17T14:05:00+00:00
+11;30;Joliot Curie : Pont Saint Jean à Avenue Thiers;240;224;2011-06-09;2025-12-17T14:05:00+00:00
+12;31;Joliot Curie : Avenue Thiers au Pont Saint Jean;240;234;2011-06-09;2025-12-17T14:05:00+00:00
+13;32;Aliénor: Place Latule à la Rocade;180;116;2011-06-09;2025-12-17T14:05:00+00:00
+14;33;Aliénor: Rocade à la Place Latule;300;135;2011-06-09;2025-12-17T14:05:00+00:00
+15;34;4 pavillons : Mairie de Cenon à la Rocade;240;122;2011-06-09;2025-12-17T14:05:00+00:00
+16;35;4 pavillons : Rocade à la Mairie de Cenon;240;192;2011-06-09;2025-12-17T14:05:00+00:00
