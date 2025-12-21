@@ -16,9 +16,9 @@
 python scripts/ingest_atelier1.py --run all
 
 ### Résultats
-- Données brutes historisées (datalake/raw)
-- Données nettoyées et normalisées (datalake/clean)
-- Jeu de données final de features (datalake/features)
+- Données brutes historisées
+- Données nettoyées et normalisées
+- Jeu de données final
 
 
 ## Atelier 2 : collecte en ligne (scraping) de données touristiques
@@ -30,7 +30,6 @@ Enrichir les données existantes avec des informations touristiques collectées 
 Collecte limitée en fréquence
 Données publiques uniquement
 Usage strictement pédagogique
-Remplacement du domaine réel par tourisme.example avant stockage
 
 ### Étapes
 Récupération d’une liste d’événements (titre, date, lien)
@@ -38,8 +37,7 @@ Exploration des pages détail pour enrichir les informations
 Stockage des données en Parquet avec nommage unique
 
 ### Exécution
-python scripts/scrape_list.py
-python scripts/scrape_details.py
+python scripts
 
 ### Installation de l’environnement
 pip install dotenv
