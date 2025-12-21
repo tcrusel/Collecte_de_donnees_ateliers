@@ -56,4 +56,3 @@ Les fichiers bruts et intermédiaires ne sont pas versionnés (via .gitignore)
 Edouard Dieppois
 Nicolas Chiche
 Thomas Crusel
->>>>>>> 2ff411dd7c4b1e4a22f96580d34650b2128205c1
